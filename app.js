@@ -10,9 +10,18 @@ console.log(profileDataArgs);
   
 // Notice the lack of parentheses around the `profileDataArr` parameter?
 const printProfileData = profileDataArr => {
-    for (let i = 0; i < profileDataArr.length; i++) {
+    // This...
+    for (let i = 0; i < profileDataArr.length; i += 1) {
       console.log(profileDataArr[i]);
     }
+  
+    console.log('================');
+  
+    // Is the same as this... Which then gets refined
+    // profileDataArr.forEach((profileItem) => {
+    //   console.log(profileItem)
+    // }); Wow It's really clean.
+    profileDataArr.forEach(profileItem => console.log(profileItem));
   };
 
   printProfileData(profileDataArgs);
